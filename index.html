@@ -27,6 +27,9 @@
 
 		<!-- Bootstrap CSS / Color Scheme -->
 		<link rel="stylesheet" href="css/default.css" id="theme-color" />
+
+		<!-- Script for email -->
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</head>
 	<body>
 		<!--navigation-->
@@ -76,7 +79,7 @@
 						<h1>Un servicio para gestionar y hacer crecer tu negocio.</h1>
 						<p class="lead mt-4 mb-5">
 							Una forma <b>sencilla</b>, <b>rapida</b> y <b>eficaz</b> de
-							cunplir con tus obligaciones laborales y fiscales.
+							cumplir con tus obligaciones laborales y fiscales.
 						</p>
 						<p><img class="img-fluid" src="img/mockup.png" alt="Mockup" /></p>
 					</div>
@@ -505,7 +508,12 @@
 				</div>
 				<div class="row mt-5">
 					<div class="col-md-8 mx-auto">
-						<form>
+						<form
+							action="mailto:XXX@gmail.com&subject=Consulta%20a%20JDF%20Management"
+							method="POST"
+							enctype="text/plain"
+							name="EmailForm"
+						>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -513,6 +521,7 @@
 											type="text"
 											class="form-control"
 											placeholder="Nombre"
+											name="Nombre "
 										/>
 									</div>
 								</div>
@@ -522,6 +531,7 @@
 											type="text"
 											class="form-control"
 											placeholder="Apellidos"
+											name="Apellidos "
 										/>
 									</div>
 								</div>
@@ -531,6 +541,7 @@
 											type="email"
 											class="form-control"
 											placeholder="Email"
+											name="Email "
 										/>
 									</div>
 								</div>
@@ -540,6 +551,7 @@
 											type="tel"
 											class="form-control"
 											placeholder="Numero de telefono"
+											name="Telefono "
 										/>
 									</div>
 								</div>
@@ -549,12 +561,15 @@
 											rows="5"
 											class="form-control"
 											placeholder="Escribe aquí tu consulta"
+											name="Consulta "
 										></textarea>
 									</div>
 								</div>
 							</div>
 							<div class="text-center mt-3">
-								<button class="btn btn-primary">Envía tu mensaje</button>
+								<button class="btn btn-primary" type="submit" value="Submit">
+									Envía tu mensaje
+								</button>
 							</div>
 						</form>
 					</div>
