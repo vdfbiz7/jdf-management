@@ -27,13 +27,20 @@
 
 		<!-- Bootstrap CSS / Color Scheme -->
 		<link rel="stylesheet" href="css/default.css" id="theme-color" />
+
+		<!-- Script for email -->
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
 	</head>
 	<body>
 		<!--navigation-->
 		<nav
 			class="navbar navbar-expand-md navbar-light bg-white fixed-top sticky-navigation"
 		>
-			<a class="navbar-brand mx-auto" href="index.html"> JDF Management </a>
+			<a class="navbar-brand mx-auto" href="index.html">
+				<div class="logo-image">
+					<img src="/img/logo.png" style="height: 40%" />
+				</div>
+			</a>
 			<button
 				class="navbar-toggler navbar-toggler-right border-0"
 				type="button"
@@ -60,6 +67,9 @@
 						<a class="nav-link page-scroll" href="#blog">Blog</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link page-scroll" href="#team">Equipo</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link page-scroll font-weight-bold" href="#contact"
 							>Contacto</a
 						>
@@ -67,52 +77,40 @@
 				</ul>
 			</div>
 		</nav>
-
-		<!--hero header-->
-		<section class="pt-7 pt-md-8" id="home">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 mx-auto my-auto text-center">
-						<h1>Un servicio para gestionar y hacer crecer tu negocio.</h1>
-						<p class="lead mt-4 mb-5">
-							Una forma <b>sencilla</b>, <b>rapida</b> y <b>eficaz</b> de
-							cunplir con tus obligaciones laborales y fiscales.
-						</p>
-						<p><img class="img-fluid" src="img/mockup.png" alt="Mockup" /></p>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- about section -->
+		<!-- Header and about section -->
 		<section class="pb-7" id="about">
 			<div class="container">
 				<hr class="my-6" />
 				<div class="row">
+					<div class="col-md-8 mx-auto my-auto text-center">
+						<h1>Un servicio para gestionar y hacer crecer tu negocio.</h1>
+					</div>
 					<div class="col-md-6 mx-auto text-center">
 						<h4 class="dot-circle font-weight-normal">
-							We work with world's top companies to create beautiful products &
-							apps.
+							Una forma <b>sencilla</b>, <b>rapida</b> y <b>eficaz</b> de
+							cumplir con tus obligaciones laborales y fiscales.
 						</h4>
 					</div>
 				</div>
+				<hr class="my-6" />
 
 				<div class="row mt-5">
 					<div class="col-md-6 order-2 order-md-1 my-md-auto">
-						<h3>Google Design</h3>
+						<h3>Nuevos tiempos, nuevas formas de ....</h3>
 						<p class="text-muted lead">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
 							id ante posuere, vestibulum mauris eget, efficitur felis.
 							Vestibulum tincidunt sit amet odio at gravida. Cras mollis dapibus
 							orci, in interdum odio scelerisque rhoncus.
 						</p>
-						<a href="#" class="btn btn-primary">View project</a>
+						<a href="#team" class="btn btn-primary">Ver el equipo</a>
 					</div>
 					<div class="col-md-6 order-1 order-md-2">
 						<img
-							src="img/google-design.jpeg"
+							src="img/acuerdo.jpg"
 							class="img-fluid d-block mx-auto"
-							alt="Google Design"
+							alt="Acuerdo"
+							style="border-radius: 10%; max-width: 75%; max-height: 75%"
 						/>
 					</div>
 					<div
@@ -133,96 +131,6 @@
 						</div>
 					</div>
 				</div>
-
-				<div class="row">
-					<div class="col-md-6">
-						<img
-							src="img/facebook-messenger.jpeg"
-							class="img-fluid d-block mx-auto"
-							alt="Facebook Messenger"
-						/>
-					</div>
-					<div class="col-md-6 my-md-auto">
-						<h3>Facebook Messenger</h3>
-						<p class="text-muted lead">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-							id ante posuere, vestibulum mauris eget, efficitur felis.
-							Vestibulum tincidunt sit amet odio at gravida. Cras mollis dapibus
-							orci, in interdum odio scelerisque rhoncus.
-						</p>
-						<a href="#" class="btn btn-primary">View project</a>
-					</div>
-					<div
-						class="col-md-6 mx-auto border-top border-bottom mt-5 mt-md-0 py-4"
-					>
-						<div class="review text-center">
-							<p class="quote">
-								Integer id ante posuere, vestibulum mauris eget, efficitur
-								felis.
-							</p>
-							<div
-								class="mt-4 d-flex flex-row align-items-center justify-content-center"
-							>
-								<img
-									src="img/client-2.jpg"
-									class="img-review rounded-circle mr-2"
-									alt="Client 2"
-								/>
-								<span class="text-muted">Ameli Mao, VP Facebook</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col-md-6 order-2 order-md-1 my-md-auto">
-						<h3>Twitter Mobile</h3>
-						<p class="text-muted lead">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-							id ante posuere, vestibulum mauris eget, efficitur felis.
-							Vestibulum tincidunt sit amet odio at gravida. Cras mollis dapibus
-							orci, in interdum odio scelerisque rhoncus.
-						</p>
-						<a href="#" class="btn btn-primary">View project</a>
-					</div>
-					<div class="col-md-6 order-1 order-md-2">
-						<img
-							src="img/twitter-mobile.jpeg"
-							class="img-fluid d-block mx-auto"
-							alt="Twitter Mobile"
-						/>
-					</div>
-					<div
-						class="col-md-6 order-3 mx-auto border-top border-bottom mt-5 mt-md-0 py-4"
-					>
-						<div class="review text-center">
-							<p class="quote">
-								Praesent vulputate dolor velit, pellentesin condimentum odio
-								pellentesque libero.
-							</p>
-							<div
-								class="mt-4 d-flex flex-row align-items-center justify-content-center"
-							>
-								<img
-									src="img/client-3.jpg"
-									class="img-review rounded-circle mr-2"
-									alt="Client 3"
-								/>
-								<span class="text-muted">Kathrine Jones, Twitter</span>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="row mt-6">
-					<div class="col-md-6 mx-auto text-center">
-						<h4>Want to work with us?</h4>
-						<p class="lead text-muted">
-							Ready to launch your awesome project? We'd be happy to help you.
-						</p>
-						<a href="#" class="btn btn-primary">Get in touch</a>
-					</div>
-				</div>
 			</div>
 		</section>
 
@@ -231,7 +139,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 mx-auto">
-						<h2 class="dot-circle">Servicos que ofrecemos</h2>
+						<h2 class="dot-circle">Servicios que ofrecemos</h2>
 						<p class="text-muted lead">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 							Vestibulum in nisi commodo, tempus odio a, vestibulum nibh.
@@ -249,7 +157,7 @@
 												<span data-feather="crop" width="30" height="30"></span>
 											</div>
 										</div>
-										<h5 class="mt-0 mb-3">Gestoria de sociedades</h5>
+										<h5 class="mt-0 mb-3">Gestoría de sociedades</h5>
 										Nam liber tempor cum soluta nobis eleifend option congue
 										nihil imper.
 									</div>
@@ -267,7 +175,7 @@
 												></span>
 											</div>
 										</div>
-										<h5 class="mt-0 mb-3">Autonomos</h5>
+										<h5 class="mt-0 mb-3">Autónomos</h5>
 										Nam liber tempor cum soluta nobis eleifend option congue
 										nihil imper.
 									</div>
@@ -303,7 +211,7 @@
 												></span>
 											</div>
 										</div>
-										<h5 class="mt-0 mb-3">Asesoria legal</h5>
+										<h5 class="mt-0 mb-3">Asesoría legal</h5>
 										Nam liber tempor cum soluta nobis eleifend option congue
 										nihil imper.
 									</div>
@@ -311,32 +219,12 @@
 							</div>
 							<div class="col-md-6 mx-auto text-center">
 								<hr class="my-5" />
-								<h4>Necesitas una asesoramiento personalizado</h4>
+								<h4>¿Necesitas una asesoramiento personalizado?</h4>
 								<a href="#contact" class="btn btn-primary"
 									>Contacta con nosotros</a
 								>
 							</div>
 						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!--call to action-->
-		<section
-			class="bg-hero py-8"
-			style="background-image: url(img/parallex.jpg)"
-		>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-7 mx-auto text-center">
-						<h2 class="text-white">
-							We help the world's top companies to create amazing products.
-						</h2>
-						<p class="lead text-white my-4">
-							Ready to launch your awesome website?
-						</p>
-						<button class="btn btn-primary">Request a free quote</button>
 					</div>
 				</div>
 			</div>
@@ -363,7 +251,7 @@
 								</div>
 							</div>
 							<div class="media-body">
-								<h5>Analisis y diagnostico del caso</h5>
+								<h5>Análisis y diagnóstico del caso</h5>
 								<p class="text-muted">
 									Nam liber tempor cum soluta nobis eleifend option congue nihil
 									imper.
@@ -391,7 +279,7 @@
 								</div>
 							</div>
 							<div class="media-body">
-								<h5>Atencion constante y personlizada</h5>
+								<h5>Atención constante y personlizada</h5>
 								<p class="text-muted">
 									Nam liber tempor cum soluta nobis eleifend option congue nihil
 									imper.
@@ -405,7 +293,7 @@
 								</div>
 							</div>
 							<div class="media-body">
-								<h5>Implemntacion de la solución</h5>
+								<h5>Implemntación de la solución</h5>
 								<p class="text-muted">
 									Nam liber tempor cum soluta nobis eleifend option congue nihil
 									imper.
@@ -417,7 +305,7 @@
 				<div class="row mt-7">
 					<div class="col-md-6 mx-auto text-center">
 						<h3 class="dot-circle dot-lg">
-							Servicios para Empresas , PYMEs y Autonomos.
+							Servicios para Empresas , PYMEs y Autonómos.
 						</h3>
 						<p class="lead text-muted mb-4">
 							Si no tienes tiempo ni personal especializado en la gestión y
@@ -453,7 +341,7 @@
 							</a>
 							<div class="card-body">
 								<a href="#">
-									<h5 class="card-title">Nueva actualizacion del Modulo 50X</h5>
+									<h5 class="card-title">Nueva actualización del Modulo 50X</h5>
 									<p class="card-text">
 										Nam liber tempor cum soluta nobis eleifend option congue
 										nihil imper, consectetur adipiscing elit.
@@ -490,22 +378,73 @@
 			</div>
 		</section>
 
+		<!-- team section -->
+		<section class="pb-7" id="team">
+			<div class="container">
+				<hr class="my-6" />
+				<div class="row">
+					<div class="col-md-8 mx-auto my-auto text-center">
+						<h1 style="">Nuestro equipo</h1>
+					</div>
+					<div class="col-md-8 mx-auto my-auto text-center">
+						<div
+							class="card"
+							style="
+								box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+								max-width: 300px;
+								margin: auto;
+								text-align: center;
+								font-family: arial;
+								padding-top: 14px;
+							"
+						>
+							<img
+								src="/img/javier.jpg"
+								alt="John"
+								style="
+									border-radius: 10%;
+									max-width: 75%;
+									max-height: 75%;
+									align-self: center;
+								"
+							/>
+							<h1>Javier Dorado</h1>
+							<p class="title">CEO & Founder, JDF Management</p>
+							<p>Barcelona</p>
+							<div style="margin: 24px 0">
+								<a href="#"><i class="fa fa-dribbble"></i></a>
+								<a href="#"><i class="fa fa-twitter"></i></a>
+								<a href="#"><i class="fa fa-linkedin"></i></a>
+								<a href="#"><i class="fa fa-facebook"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!--contact section-->
 		<section class="py-7" id="contact">
 			<div class="container">
+				<hr class="my-6" />
 				<div class="row">
 					<div class="col-md-6 mx-auto text-center">
 						<h2>Quieres contactar con nosotros?</h2>
 						<div class="divider bg-primary mx-auto"></div>
 						<p class="text-muted lead">
-							¿Quieres saber más sobre nosotros o tienes alguna duda? Mandanos
+							¿Quieres saber más sobre nosotros o tienes alguna duda? Mándanos
 							un mensaje!
 						</p>
 					</div>
 				</div>
 				<div class="row mt-5">
 					<div class="col-md-8 mx-auto">
-						<form>
+						<form
+							action="mailto:XXX@gmail.com&subject=Consulta%20a%20JDF%20Management"
+							method="POST"
+							enctype="text/plain"
+							name="EmailForm"
+						>
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -513,6 +452,7 @@
 											type="text"
 											class="form-control"
 											placeholder="Nombre"
+											name="Nombre "
 										/>
 									</div>
 								</div>
@@ -522,6 +462,7 @@
 											type="text"
 											class="form-control"
 											placeholder="Apellidos"
+											name="Apellidos "
 										/>
 									</div>
 								</div>
@@ -531,6 +472,7 @@
 											type="email"
 											class="form-control"
 											placeholder="Email"
+											name="Email "
 										/>
 									</div>
 								</div>
@@ -540,6 +482,7 @@
 											type="tel"
 											class="form-control"
 											placeholder="Numero de telefono"
+											name="Telefono "
 										/>
 									</div>
 								</div>
@@ -549,12 +492,15 @@
 											rows="5"
 											class="form-control"
 											placeholder="Escribe aquí tu consulta"
+											name="Consulta "
 										></textarea>
 									</div>
 								</div>
 							</div>
 							<div class="text-center mt-3">
-								<button class="btn btn-primary">Envía tu mensaje</button>
+								<button class="btn btn-primary" type="submit" value="Submit">
+									Envía tu mensaje
+								</button>
 							</div>
 						</form>
 					</div>
